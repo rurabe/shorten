@@ -1,6 +1,6 @@
 Shorten::Application.routes.draw do
   
-  root      :to => 'urls#home'
+  root      :to => 'urls#new'
   resources :urls
   match     ':key' => 'urls#edit'
 
