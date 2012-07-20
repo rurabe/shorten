@@ -2,7 +2,7 @@ Shorten::Application.routes.draw do
   
   root      :to => 'urls#new'
   resources :urls
-  match     ':key' => 'urls#edit'
+  match     ':key' => 'urls#redirect'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
