@@ -14,7 +14,10 @@ class UrlsController < ApplicationController
   def create
     @url = Url.new(:long_url => params[:long_url], :key => Url.generate_key)
     @url.save
-    @all_urls = Url.order("created_at DESC")
     redirect_to url_path(@url)
+  end
+  
+  def new
+    @all_urls = Url.order("created_at DESC")
   end
 end

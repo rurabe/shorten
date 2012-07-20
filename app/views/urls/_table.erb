@@ -1,6 +1,17 @@
 
 <table class="infotable">
-	<% Url.order("created_at DESC").each_with_index do |url, index| %>
+		<tr>
+			<td>
+				<strong>#</strong>
+			</td>
+			<td>
+				<strong>Key</strong>
+			</td>
+			<td>
+				<strong>URL</strong>
+			</td>
+		</tr>
+	<% @all_urls.each_with_index do |url, index| %>
 		<tr>
 			<td>
 				<span class"tabletext"><%= index + 1%></span>
