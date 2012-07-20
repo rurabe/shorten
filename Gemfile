@@ -4,7 +4,14 @@ gem 'rails', '3.2.3'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-gem 'activerecord-postgresql-adapter', '0.0.1'
+group :production do
+  gem 'activerecord-postgresql-adapter', '0.0.1'
+  gem 'pg'
+end
+
+group :development do
+  gem 'sqlite3'
+end
 
 
 # Gems used only for assets and not required
