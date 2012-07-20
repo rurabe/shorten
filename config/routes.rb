@@ -1,8 +1,8 @@
 Shorten::Application.routes.draw do
   
-  root      :to => 'urls#index'
+  root      :to => 'urls#home'
   resources :urls
-  match     ':key' => 'urls#show'
+  match     ':key' => 'urls#edit'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
