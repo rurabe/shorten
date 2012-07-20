@@ -1,3 +1,37 @@
 // Place all the styles related to the urls controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.srl-head{
+	display: inline;
+	text-shadow: 2px 2px 1px #b0b0b0;
+	        filter: dropshadow(color=#b0b0b0, offx=2, offy=2);
+	font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+
+.srl-box{
+	margin-top: 300px;
+}
+
+#container{
+	min-height: 1000px;
+	height: auto;
+	position: relative;
+	background-image:url(bg.jpg)
+}
+
+.result{
+	text-shadow: 2px 1px 1px #b0b0b0;
+	        filter: dropshadow(color=#b0b0b0, offx=2, offy=2);
+	font-size: 20pt;
+	opacity: 1.0;
+}
+
+/*.panel{
+
+}
+*/
+/*.inputbox{
+	height: 25pt;
+	padding: 0 0 -5pt 0;
+}*/
