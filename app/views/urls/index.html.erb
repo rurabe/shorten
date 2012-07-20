@@ -1,0 +1,7 @@
+<h1>SRL</h1>
+<p>Enter a URL:</p>
+
+<%= form_tag("/urls", :method => "post") do %>
+  <%= text_field_tag(:long_url) %>
+  <%= submit_tag("Shorten") %>
+<% end %>
