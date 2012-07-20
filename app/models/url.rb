@@ -3,12 +3,11 @@ class Url < ActiveRecord::Base
   
   BRICKS = [(0..9).to_a,("a".."z").to_a,("A".."Z").to_a].flatten!
 
-   def generate_key
+   def self.generate_key
      key = []
      4.times do
        key << BRICKS[rand(BRICKS.length)]
      end
-     self.key = key.join("")
+     key = key.join("")
    end
-
 end
