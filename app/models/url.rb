@@ -2,7 +2,7 @@ class Url < ActiveRecord::Base
   attr_accessible :key, :long_url
   
   BRICKS = [(0..9).to_a,("a".."z").to_a,("A".."Z").to_a].flatten!
-  BASE = "http://srl.herokuapp.com"
+  BASE = request.protocol + request.host_with_port
 
    def self.generate_key
      key = []
