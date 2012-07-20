@@ -1,0 +1,16 @@
+
+<table class="infotable">
+	<% Url.order("created_at DESC").each_with_index do |url, index| %>
+		<tr>
+			<td>
+				<span class"tabletext"><%= index + 1%></span>
+			</td>
+			<td>
+				<span><%= link_to url.key, "#{root_url}#{url.key}", :class => "tabletext" %></span>
+			</td>
+			<td>
+				<span><%= link_to url.long_url, "#{root_url}#{url.key}", :class => "tabletext"  %></span>
+			</td>
+		</tr>
+	<% end %>
+</table>

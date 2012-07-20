@@ -1,10 +1,12 @@
-<div id="container">
+<div>
 	<div class="row" >
-		<div class="five offset-by-six srl-box" >
+		<div class="seven columns" style="height:1000px">
+			<%= render "table" %>
+		</div>
+		<div class="five columns push-six srl-box" >
 
-<%= render "title" %>
-<br>
-
+			<%= render "title" %>
+			<br>
 			<div class="panel radius">
 				<%= link_to @link, @link, :class => "result inputbox" %>
 			</div>

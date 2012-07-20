@@ -10,14 +10,12 @@
 }
 
 .srl-box{
-	margin-top: 300px;
+	margin-top: 300px ;
+	position: fixed;
 }
 
 #container{
-	min-height: 1000px;
-	height: auto;
-	position: relative;
-	background-image:url(bg.jpg)
+
 }
 
 .result{
@@ -27,6 +25,38 @@
 	opacity: 1.0;
 }
 
+.tabletext{
+	color: #505050;
+	text-shadow: 1px 1px 1px #b0b0b0;
+	        filter: dropshadow(color=#b0b0b0, offx=2, offy=2);
+}
+
+.infotable{
+	margin: 50px 0 50px 0;
+}
+
+table {
+	 background: rgba(255,255,255, .3);
+}
+
+table tbody tr.even, table tbody tr.alt { 
+	background: rgba(255,255,255, .2); 
+	}
+
+table tbody tr:nth-child(even) { 
+	background: rgba(255,255,255, .2); 
+	}
+	
+html {
+	background-image: url(bg.jpg) ;
+	background-repeat: no-repeat;
+	background-attachment: fixed
+}
+
+
+body {
+	background:transparent;
+}
 /*.panel{
 
 }
