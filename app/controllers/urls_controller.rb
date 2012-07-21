@@ -9,7 +9,8 @@ class UrlsController < ApplicationController
   end
   
   def show
-    @latest_urls = Url.latest
+    @most_recent_urls = Url.most_recent
+    @most_popular_urls = Url.most_popular
     @new_url = Url.find(params[:id])
     @link = @new_url.to_s
   end
@@ -22,6 +23,7 @@ class UrlsController < ApplicationController
   end
   
   def new
-    @latest_urls = Url.latest
+    @most_recent_urls = Url.most_recent
+    @most_popular_urls = Url.most_popular
   end
 end
