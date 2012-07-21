@@ -18,7 +18,7 @@ class Url < ActiveRecord::Base
    end
    
    def clicks_count
-     clicks.count
+     self.clicks.count
    end
    
    def self.latest
