@@ -21,12 +21,12 @@ class Url < ActiveRecord::Base
      self.clicks.count
    end
    
-   def self.most_recent
+   def self.latest
      Url.order("created_at DESC")
    end
    
    def self.most_popular
-     Url.joins(:clicks).group("urls.id").order("COUNT(clicks.id) DESC")
+     Url.order("clicks.count")
    end
      
 end
