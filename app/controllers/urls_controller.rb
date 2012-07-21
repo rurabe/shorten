@@ -20,7 +20,7 @@ class UrlsController < ApplicationController
     if @url.save
       redirect_to url_path(@url)
     else
-      flash[:error] = "Hmmm... I don't recognize that address. :("
+      flash[:error] = "Hmmm... I don't recognize that address. Try using http://"
       redirect_to root_path
     end
   end

@@ -1,7 +1,7 @@
 class Url < ActiveRecord::Base
   attr_accessible :key, :long_url
   has_many :clicks
-  validates :
+  validates :long_url, :format => { :with => URI::regexp, :error => "Please use http://" }
   
   BRICKS = [(0..9).to_a,("a".."z").to_a,("A".."Z").to_a].flatten!
   BASE = "http://srl.herokuapp.com"
