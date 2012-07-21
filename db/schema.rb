@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120720032256) do
+ActiveRecord::Schema.define(:version => 20120721000724) do
+
+  create_table "clicks", :force => true do |t|
+    t.integer  "url_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "clicks", ["url_id"], :name => "index_clicks_on_url_id"
 
   create_table "urls", :force => true do |t|
     t.string   "long_url"

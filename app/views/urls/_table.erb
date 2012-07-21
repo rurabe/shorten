@@ -10,8 +10,11 @@
 			<td>
 				<strong>URL</strong>
 			</td>
+			<td>
+				<strong>Clicks</strong>
+			</td>
 		</tr>
-	<% @all_urls.each_with_index do |url, index| %>
+	<% @latest_urls.each_with_index do |url, index| %>
 		<tr>
 			<td>
 				<span class"tabletext"><%= index + 1%></span>
@@ -21,6 +24,9 @@
 			</td>
 			<td>
 				<span><%= link_to url.long_url, "#{root_url}#{url.key}", :class => "tabletext", :target => "_blank"   %></span>
+			</td>
+			<td style="text-align:right">
+				<span class"tabletext"><%= url.clicks_count %></span>
 			</td>
 		</tr>
 	<% end %>
