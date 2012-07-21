@@ -21,7 +21,7 @@ class Url < ActiveRecord::Base
      self.clicks.count
    end
    
-   def self.latest
+   def self.most_recent
      Url.order("created_at DESC")
    end
    
