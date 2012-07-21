@@ -7,7 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+	<% if flash[:error] -%>
+		<%= render "/shared/error" -%>
+	<% end %>
+	<% if flash[:notice] -%>
+		<%= render "/shared/notice" -%>
+	<% end %>
+	<% if flash[:message] -%>
+		<%= render "/shared/message" -%>
+	<% end %>
+	
 
 		<%= yield %>
 	
