@@ -3,7 +3,7 @@ Shorten::Application.routes.draw do
 
   root      :to => 'urls#new'
   resources :urls
-  match     ':key' => 'urls#redirect'
+  match     ':key' => 'clicks#create'
   
   
 
