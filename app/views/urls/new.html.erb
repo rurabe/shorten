@@ -1,14 +1,16 @@
-<div>
-	<div class="row" >
-		<div class="seven columns">
-			<%= render "tabs" %>
-		</div>
-		<div class="five columns push-six srl-box" >
-				<%= render 'title' %>
-					<%= form_tag("/urls", :method => "post") do %>
-					  <%= text_field_tag :long_url, "http://www." %>
-					  <%= submit_tag "Shorten", :class => "srl-button radius button"%>
-					<% end %>
-		</div>
+
+
+<div class="row">
+	<div class="six columns">
+		<%= render "tabs" %>
+	</div>
+	<div class="five columns push-seven srl-box" >
+
+		<%= render 'title' %>
+		<%= form_for @url do |f| %>
+		  <%= f.text_field :long_url, :value => "http://www."  %>
+		  <%= f.text_field :key, :placeholder => "Choose a url suffix (optional)" %>
+		  <%= submit_tag "Shorten", :class => "srl-button radius button"%>
+		<% end %>
 	</div>
 </div>

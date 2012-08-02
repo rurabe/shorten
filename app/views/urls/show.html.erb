@@ -1,16 +1,13 @@
-<div>
-	<div class="row" >
-		<div class="seven columns">
-			<%= render "tabs" %>
+<div class="row" >
+	<div class="six columns">
+		<%= render "tabs" %>
+	</div>
+	<div class="five columns push-seven srl-box" >
+		<%= render "title" %>
+		<br>
+		<div class="panel radius">
+			<%= link_to full_url(@url), full_url(@url), :class => "result inputbox", :target => "_blank"  %>
 		</div>
-		<div class="five columns push-six srl-box" >
-
-			<%= render "title" %>
-			<br>
-			<div class="panel radius">
-				<%= link_to @link, @link, :class => "result inputbox", :target => "_blank"  %>
-			</div>
-			<%= link_to "Another!", root_path, :class => "srl-button radius button"  %>
-		</div>
+		<%= link_to "Another!", root_path, :class => "srl-button radius button"  %>
 	</div>
 </div>

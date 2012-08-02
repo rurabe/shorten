@@ -19,10 +19,11 @@
 }
 
 
+
 .result{
 	text-shadow: 2px 1px 1px #b0b0b0;
 	        filter: dropshadow(color=#b0b0b0, offx=2, offy=2);
-	font-size: 18pt;
+	font-size: 16pt;
 	opacity: 1.0;
 }
 
@@ -35,6 +36,15 @@
 .infotable{
 	margin: 50px 0 50px 0;
 	width:404px;
+	border: 0px;
+
+}
+
+.login{
+	margin: 50px 0 50px 0;
+	width:100%;
+	background: rgba(255,255,255, .2); 
+	padding: 10px 15px; 
 }
 
 
@@ -49,8 +59,6 @@ table tbody tr.even, table tbody tr.alt {
 table tbody tr:nth-child(even) { 
 	background: rgba(255,255,255, .2); 
 	}
-
-
 	
 html {
 	background-image: url(bg.jpg) ;
@@ -152,7 +160,7 @@ body {
 
 .message-bubble{
 	width:250px; 
-	margin-top:100px; 
+	margin:100px 50px; 
 	position:fixed;
 
 }
@@ -161,7 +169,7 @@ body {
 	color: #990000;
 	text-shadow: 1px 1px 1px #b0b0b0;
 	        filter: dropshadow(color=#b0b0b0, offx=2, offy=2);
-	font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	/*font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;*/
 	font-size: 14pt;
 	vertical-align:middle;
 }
@@ -170,7 +178,7 @@ body {
 	color: #008100;
 	text-shadow: 1px 1px 1px #b0b0b0;
 	        filter: dropshadow(color=#b0b0b0, offx=2, offy=2);
-	font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	/*font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;*/
 	font-size: 14pt;
 	vertical-align:middle;
 }
@@ -179,7 +187,7 @@ body {
 	color: #2ba6cb;
 	text-shadow: 1px 1px 1px #b0b0b0;
 	        filter: dropshadow(color=#b0b0b0, offx=2, offy=2);
-	font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	/*font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;*/
 	font-size: 14pt;
 	vertical-align:middle;
 }

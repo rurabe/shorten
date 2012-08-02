@@ -3,7 +3,6 @@ class UrlsController < ApplicationController
   def redirect
     url = Url.find_by_key(params[:key])
     click = url.clicks.build
-    #todo - error handling
     click.save
     redirect_to url.long_url
   end
@@ -11,13 +10,11 @@ class UrlsController < ApplicationController
   def show
     @most_recent_urls = Url.most_recent
     @most_popular_urls = Url.most_popular
-    @new_url = Url.find(params[:id])
-    @link = @new_url.to_s
+    @url = Url.find(params[:id])
   end
 
   def create
-    @url = Url.new(:long_url => params[:long_url], :key => Url.generate_key)
-    #todo - error handling
+    @url = Url.new(params[:url])
     if @url.save
       redirect_to url_path(@url)
     else
@@ -27,6 +24,8 @@ class UrlsController < ApplicationController
   end
   
   def new
+    @url = Url.new
+    @user = User.new
     @most_recent_urls = Url.most_recent
     @most_popular_urls = Url.most_popular
   end

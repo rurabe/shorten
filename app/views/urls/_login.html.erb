@@ -1,0 +1,17 @@
+<div class="login">
+	<h3>Sign in</h3>
+
+	<%= form_for @user, :url => new_user_session_path, :action => :post do |f| %>
+		<%= f.label :email %>
+		<%= f.text_field :email %>
+
+		<%= f.label :password %>
+		<%= f.password_field :password %>
+
+		<%= f.submit "Sign in", :class => "radius button"%>
+
+	<% end %>
+
+
+
+</div>
