@@ -18,14 +18,13 @@ class UrlsController < ApplicationController
     if @url.save
       redirect_to url_path(@url)
     else
-      flash[:error] = "Hmmm... I don't recognize that address. Try using http://"
+      flash[:error] = @url.errors.full_messages
       redirect_to root_path
     end
   end
   
   def new
     @url = Url.new
-    @user = User.new
     @most_recent_urls = Url.most_recent
     @most_popular_urls = Url.most_popular
   end

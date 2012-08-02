@@ -1,12 +1,14 @@
 class Url < ActiveRecord::Base
   attr_accessible :key, :long_url
   has_many :clicks
-  validates :long_url, :format => { :with => URI::regexp, :error => "Please use http://" }
+  validates :long_url, :format => { :with => URI::regexp }
+  validates :key, :uniqueness => { :case_sensitive => :false }
   
   BRICKS = [(0..9).to_a,("a".."z").to_a,("A".."Z").to_a].flatten!
   BASE = "http://srl.herokuapp.com"
-
-   before_create :set_key
+  
+  before_validation :add_http
+  before_create :set_key
    
    def to_s
      "#{BASE}/#{self.key}"
@@ -41,6 +43,10 @@ class Url < ActiveRecord::Base
 
     def custom_key
       self.key.parameterize
+    end
+
+    def add_http
+      self.long_url = "http://" + self.long_url if self.long_url.match(/^http:\/\//).nil?
     end
      
 end

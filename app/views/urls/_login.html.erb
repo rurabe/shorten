@@ -1,7 +1,7 @@
 <div class="login">
 	<h3>Sign in</h3>
 
-	<%= form_for @user, :url => new_user_session_path, :action => :post do |f| %>
+	<%= form_for, :url => new_user_session_path, :action => :post do |f| %>
 		<%= f.label :email %>
 		<%= f.text_field :email %>
 
