@@ -8,8 +8,8 @@
 
 		<%= render 'title' %>
 		<%= form_for @url do |f| %>
-		  <%= f.text_field :long_url, :value => "http://www."  %>
-		  <%= f.text_field :key, :placeholder => "Choose a url suffix (optional)" %>
+		  <%= f.text_field :long_url, :placeholder => "Type a URL"  %>
+		  <%= f.text_field :key, :placeholder => "Choose a custom short URL (optional)" %>
 		  <%= submit_tag "Shorten", :class => "srl-button radius button"%>
 		<% end %>
 	</div>

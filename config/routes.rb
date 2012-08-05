@@ -1,9 +1,14 @@
 Shorten::Application.routes.draw do
 
 
+  
+
   root      :to => 'urls#new'
   resources :urls
+  resources :users, :only => :create
+  resources :sessions, :only => [:new,:create,:destroy]
   match     ':key' => 'clicks#create'
+
   
   
 

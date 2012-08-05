@@ -24,6 +24,7 @@ group :assets do
   # gem 'therubyracer', :platform => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+  gem 'quiet_assets', '1.0.1'
 end
 
 gem 'jquery-rails'

@@ -18,6 +18,7 @@ class UrlsController < ApplicationController
   
   def new
     @url = Url.new
+    @user = User.new
   end
 
   private

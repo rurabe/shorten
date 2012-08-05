@@ -1,0 +1,31 @@
+<div class="login">
+	<h3>Sign in...</h3>
+
+	<%= form_for @session do |f| %>
+	<%= f.label :email %>
+	<%= f.text_field :email %>
+
+	<%= f.label :password %>
+	<%= f.password	:password %>
+
+	<%= f.submit %>
+<% end %>
+</div>
+
+<div class="login">
+	<h3>...or Sign up</h3>
+
+	<%= form_for @user do |f| %>
+		<%= f.label :email %>
+		<%= f.text_field :email %>
+
+		<%= f.label :password %>
+		<%= f.password_field :password %>
+
+		<%= f.label :one_more_time %>
+		<%= f.password_field :password_confirmation %>
+
+		<%= f.submit "Sign up", :class => "radius button"%>
+
+	<% end %>
+</div>
