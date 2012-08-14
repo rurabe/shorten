@@ -10,9 +10,9 @@
   <li id="popularTab"><%= render 'popular' %></li>
   <li id="userTab">
     <% if current_user %>
-      <%= render 'signin' %>
-    <% else %>
       <%= render 'user' %>
+    <% else %>
+      <%= render 'signin' %>
     <% end %>
   </li>
 </ul>
