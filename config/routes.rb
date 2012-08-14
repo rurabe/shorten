@@ -7,7 +7,8 @@ Shorten::Application.routes.draw do
   resources :urls
   resources :users, :only => :create
   resources :sessions, :only => [:new,:create,:destroy]
-  match     ':key' => 'clicks#create'
+  match '/signout', :to => 'sessions#destroy', :via => :delete
+  match ':key' => 'clicks#create'
 
   
   

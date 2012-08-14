@@ -1,0 +1,52 @@
+<div class="login">
+		<a href="#" id="signup_link" class="login_link"><h3>Sign up</h3></a>
+	<div id="signup">
+		<%= form_for @user do |f| %>
+			<%= f.label :email %>
+			<%= f.text_field :email %>
+
+			<%= f.label :password %>
+			<%= f.password_field :password %>
+
+			<%= f.label :one_more_time %>
+			<%= f.password_field :password_confirmation %>
+
+			<%= f.submit "Sign up", :class => "radius button"%>
+		<% end %>
+	</div>
+
+	<a href="#" id="login_link" class="login_link"><h5>... or Sign in</h5></a>
+	<div id="login">
+
+		<%= form_for :session, :url => sessions_path do |f| %>
+			<%= f.label :email %>
+			<%= f.text_field :email %>
+
+			<%= f.label :password %>
+			<%= f.password_field	:password %>
+
+			<%= f.submit "Sign in", :class => "radius button"%>
+		<% end %>
+		
+	</div>
+</div>
+
+<script>
+	$(document).ready(function(){
+		$('#login').hide();
+	});
+
+	$('#signup_link').click(function(e){
+		e.preventDefault();
+		$('#login').hide('slow');
+		$('#signup').show('slow');
+	});
+
+	$('#login_link').click(function(e){
+		e.preventDefault();
+		$('#signup').hide('slow');
+		$('#login').show('slow');
+	});
+
+</script>
+

@@ -19,6 +19,21 @@
 	
 
 		<%= yield %>
-	
+
+<%= current_user %>
+
+	<% if !current_user %>
+		<div class="signout">
+			<div class="inner-wrapper">
+				<dl class="tabs">
+					<dd>
+						<%= link_to "Sign out", signout_path, :method => "delete", :class =>"signout_link" %>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	<% end %>
+
+
 </body>
 </html>

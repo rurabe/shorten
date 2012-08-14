@@ -45,6 +45,21 @@
 	padding: 10px 15px; 
 }
 
+.login_link {
+	color: black;
+	text-decoration: underline;
+}
+
+.signout {
+
+	height: 40px;
+	width: 100px;
+	top: 0px;
+	right: 10px;
+	position: fixed;
+	cursor: pointer;
+}
+
 
 table {
 	 background: rgba(255,255,255, .3);
@@ -60,12 +75,14 @@ table tbody tr:nth-child(even) {
 	
 html {
 	background-image: url(bg.jpg) ;
-	background-attachment: fixed
+	background-attachment: fixed;
+	height: 100%;
 }
 
 
 body {
 	background:transparent;
+	height: 100%;
 }
 
 

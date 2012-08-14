@@ -1,12 +1,13 @@
 class SessionsController < ApplicationController
+  
   def create
   	user = User.find_by_email(params[:session][:email])
   	if user && user.authenticate(params[:session][:password])
   		sign_in user
-  		redirect_to 'urls#new'
+  		redirect_to new_url_path
   	else
   		flash[:error] = "Invalid email or password"
-  		render 'urls#new'
+  		redirect_to new_url_path
   	end
   end
 

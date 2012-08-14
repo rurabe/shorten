@@ -28,10 +28,9 @@ class Url < ActiveRecord::Base
         .order("COUNT(clicks.id) DESC")
    end
 
-   protected
+   private
 
     def set_key
-      warn self.key.blank?.inspect
       self.key.blank? ? self.key = random_key : self.key =  custom_key
     end
 
@@ -46,7 +45,7 @@ class Url < ActiveRecord::Base
     end
 
     def add_http
-      self.long_url = "http://" + self.long_url if self.long_url.match(/^http:\/\//).nil?
+      self.long_url = "http://" + self.long_url if self.long_url.match(/^https?:\/\//).nil?
     end
      
 end

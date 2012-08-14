@@ -8,9 +8,11 @@
 <ul class="tabs-content">
   <li class="active" id="recentTab"><%= render 'recent' %></li>
   <li id="popularTab"><%= render 'popular' %></li>
-  <% if current_user %>
-  	<li id="userTab"> "yay a user" </li>
-  <% else %>
-  	<li id="userTab"><%= render 'sign_up' %></li>
-  <% end %>
+  <li id="userTab">
+    <% if current_user %>
+      <%= render 'signin' %>
+    <% else %>
+      <%= render 'user' %>
+    <% end %>
+  </li>
 </ul>

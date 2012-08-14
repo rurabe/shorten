@@ -4,6 +4,7 @@ class UrlsController < ApplicationController
   
   def show
     @url = Url.find(params[:id])
+    @user = User.new
   end
 
   def create
@@ -26,6 +27,7 @@ class UrlsController < ApplicationController
   def fetch_lists
     @most_recent_urls = Url.most_recent
     @most_popular_urls = Url.most_popular
+    @user_urls = Url.most_recent
   end
   
 end
